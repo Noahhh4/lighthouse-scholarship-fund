@@ -30,7 +30,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #2563eb url('images/entrance-to-the-breakwater-narooma-south-coast-nsw-australia.webp') center/cover no-repeat;
+    background: #0369a1 url('images/entrance-to-the-breakwater-narooma-south-coast-nsw-australia.webp') center/cover no-repeat;
     color: white;
     overflow: hidden;
 }
@@ -41,13 +41,13 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1; /* Sits above the background image, below the content */
+    background: rgba(3, 105, 161, 0.15);
+    z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2; /* Sits above the hero-overlay */
+    z-index: 2;
     text-align: center;
     padding: 60px 20px;
     max-width: 900px;
@@ -69,7 +69,7 @@ body {
     font-size: clamp(2.5rem, 6vw, 5rem);
     font-weight: 700;
     margin-bottom: 24px;
-    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
     letter-spacing: -0.02em;
 }
 
@@ -78,31 +78,49 @@ body {
     margin-bottom: 40px;
     opacity: 0.95;
     font-weight: 300;
-    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .cta-button {
     display: inline-block;
     padding: 18px 48px;
-    background: white;
-    color: #1e3a8a;
+    background: #0ea5e9;
+    color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(14, 165, 233, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s;
+    transform: skewX(-20deg);
+}
+
+.cta-button:hover::before {
+    left: 100%;
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-    background: #f8fafc;
+    background: #0284c7;
+    box-shadow: 0 15px 40px rgba(14, 165, 233, 0.5);
 }
 
 /* Impact Section */
 .impact {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
     padding: 80px 20px;
     color: white;
 }
@@ -126,13 +144,15 @@ body {
 
 .impact-card:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(14, 165, 233, 0.6);
+    box-shadow: 0 8px 30px rgba(14, 165, 233, 0.3);
 }
 
 .impact-number {
     font-size: 3.5rem;
     font-weight: 700;
-    color: #60a5fa;
+    color: white;
     margin-bottom: 10px;
 }
 
@@ -140,6 +160,7 @@ body {
     font-size: 1.1rem;
     opacity: 0.9;
     font-weight: 300;
+    color: white;
 }
 
 /* Section Styles */
@@ -151,7 +172,7 @@ section h2 {
     font-size: clamp(2.2rem, 4vw, 3rem);
     text-align: center;
     margin-bottom: 20px;
-    color: #0f172a;
+    color: #075985;
     font-weight: 700;
 }
 
@@ -174,7 +195,7 @@ section h2 {
 
 /* About Section */
 .about {
-    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
 }
 
 /* Stories Section */
@@ -193,19 +214,21 @@ section h2 {
     background: white;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(7, 89, 133, 0.08);
     transition: all 0.4s ease;
+    border: 2px solid #bae6fd;
 }
 
 .story-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 40px rgba(7, 89, 133, 0.15);
+    border-color: #0ea5e9;
 }
 
 .story-image {
     height: 280px;
     overflow: hidden;
-    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
 }
 
 .story-image img {
@@ -225,13 +248,13 @@ section h2 {
 
 .story-content h3 {
     font-size: 1.5rem;
-    color: #0f172a;
+    color: #0c4a6e;
     margin-bottom: 8px;
 }
 
 .story-degree {
-    color: #3b82f6;
-    font-weight: 500;
+    color: #0284c7;
+    font-weight: 600;
     margin-bottom: 16px;
     font-size: 0.95rem;
 }
@@ -240,13 +263,13 @@ section h2 {
     color: #475569;
     font-style: italic;
     line-height: 1.7;
-    border-left: 3px solid #3b82f6;
+    border-left: 3px solid #0ea5e9;
     padding-left: 16px;
 }
 
 /* How It Works Section */
 .how-it-works {
-    background: linear-gradient(135deg, #f1f5f9 0%, #e0e7ff 100%);
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
 }
 
 .how-grid {
@@ -260,7 +283,15 @@ section h2 {
     background: white;
     padding: 50px;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(7, 89, 133, 0.08);
+    border: 2px solid #bae6fd;
+    transition: all 0.3s ease;
+}
+
+.how-card:hover {
+    border-color: #0ea5e9;
+    box-shadow: 0 8px 30px rgba(7, 89, 133, 0.12);
+    transform: translateY(-3px);
 }
 
 .how-icon {
@@ -270,14 +301,15 @@ section h2 {
 
 .how-card h3 {
     font-size: 2rem;
-    color: #1e3a8a;
+    color: #075985;
     margin-bottom: 30px;
 }
 
 .how-content h4 {
     font-size: 1.2rem;
-    color: #0f172a;
+    color: #0c4a6e;
     margin: 25px 0 12px;
+    font-weight: 600;
 }
 
 .how-content h4:first-child {
@@ -307,14 +339,14 @@ section h2 {
     content: '✓';
     position: absolute;
     left: 0;
-    color: #3b82f6;
+    color: #0ea5e9;
     font-weight: 700;
     font-size: 1.2rem;
 }
 
 /* Contact Section */
 .contact {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
     color: white;
 }
 
@@ -343,11 +375,13 @@ section h2 {
     border: 1px solid rgba(255, 255, 255, 0.2);
     text-align: center;
     transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
 .contact-card:hover {
     background: rgba(255, 255, 255, 0.15);
     transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .contact-card h3 {
@@ -364,22 +398,42 @@ section h2 {
 .contact-email {
     display: inline-block;
     padding: 12px 30px;
-    background: white;
-    color: #1e3a8a;
+    background: #0ea5e9;
+    color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-email::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s;
+    transform: skewX(-20deg);
+}
+
+.contact-email:hover::before {
+    left: 100%;
 }
 
 .contact-email:hover {
-    background: #f8fafc;
     transform: scale(1.05);
+    background: #0284c7;
+    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.5);
 }
 
 /* Footer */
 footer {
-    background: #0f172a;
+    background: linear-gradient(135deg, #0c4a6e 0%, #164e63 100%);
     color: white;
     text-align: center;
     padding: 40px 20px;
