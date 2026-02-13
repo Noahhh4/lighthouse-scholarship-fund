@@ -1,180 +1,229 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Lighthouse Scholarship Fund</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Lighthouse Scholarship Fund supports students from Narooma and surrounding regions to pursue tertiary education through financial assistance, mentorship, and community support.">
+	<meta name="description" content="Supporting talented students from the Far South Coast of NSW with financial assistance and mentorship to pursue tertiary education since 2007.">
+	
+	<!-- Open Graph / Social Media Meta Tags -->
+	<meta property="og:title" content="Lighthouse Scholarship Fund | Guiding Students Toward Brighter Futures">
+	<meta property="og:description" content="Supporting talented students from the Far South Coast of NSW with financial assistance and mentorship to pursue tertiary education since 2007.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://lighthousescholarship.org.au">
+	<meta name="twitter:card" content="summary_large_image">
+	
+	<title>Lighthouse Scholarship Fund | Guiding Students Toward Brighter Futures</title>
+	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
 	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+	
+	<!-- Preload critical image -->
+	<link rel="preload" href="images/lighthouse-hand-drawn-illustration.png" as="image">
 </head>
 <body>
-	<!-- Hero Section -->
-	<header class="hero">
-		<div class="hero-overlay"></div>
-		<div class="hero-content">
-			<h1>Lighthouse Scholarship Fund</h1>
-			<p class="hero-tagline">Guiding students toward brighter futures</p>
-			<a href="#contact" class="cta-button">Get In Touch</a>
-		</div>
-	</header>
-
-	<!-- Impact Section -->
-	<section class="impact">
+	<!-- Skip to main content for accessibility -->
+	<a href="#main-content" class="skip-link">Skip to main content</a>
+	
+	<nav class="nav">
 		<div class="container">
-			<div class="impact-grid">
-				<div class="impact-card">
-					<div class="impact-number">[Num]+</div>
-					<div class="impact-label">Students Supported</div>
-				</div>
-
-				<div class="impact-card">
-					<div class="impact-number">$[Num]+</div>
-					<div class="impact-label">Scholarships Awarded</div>
-				</div>
-
-				<div class="impact-card">
-					<div class="impact-number">[Num]+</div>
-					<div class="impact-label">Years of Impact</div>
-				</div>
-
-				<div class="impact-card">
-					<div class="impact-number">&infin;</div>
-					<div class="impact-label">Countless Smiles Created</div>
-				</div>
-
+			<div class="nav-content">
+				<a href="#" class="logo">Lighthouse Scholarship Fund</a>
+				<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<ul class="nav-menu" aria-hidden="true">
+					<li><a href="#about">About</a></li>
+					<li><a href="#stories">Student Stories</a></li>
+					<li><a href="#apply">How to Apply</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
 			</div>
 		</div>
-	</section>
+	</nav>
 
-	<!-- About Section -->
-	<section class="about">
-		<div class="container">
-			<h2>Our Mission</h2>
-			<p class="section-intro">The Lighthouse Scholarship Fund supports students from Narooma and surrounding regions to pursue tertiary education. We provide more than financial assistance - we offer guidance, encouragement, and a strong community.</p>
-			<p class="section-text">Each year, capable and motivated young people in our community face financial and geographic barriers to higher education. Through targeted financial support and a strong local network, we help students take the next step with confidence.</p>
-		</div>
-	</section>
-
-	<!-- Stories Section -->
-	<section class="stories">
-		<div class="container">
-			<h2>Recipient Stories</h2>
-			<p class="section-intro">Meet some of the remarkable students we've supported</p>
-			<div class="story-grid">
-				<article class="story-card">
-					<div class="story-image">
-						<img src="images/student-placeholder.jpg" alt="Scholarship recipient story" />
+	<main id="main-content">
+		<section class="hero">
+			<div class="container">
+				<div class="hero-grid">
+					<div class="hero-lighthouse">
+						<img src="images/lighthouse-hand-drawn-illustration.png" alt="Lighthouse illustration guiding ships to shore" width="1500" height="1078" loading="eager">
 					</div>
-					<div class="story-content">
-						<h3>[Name]</h3>
-						<p class="story-degree">[Degree], [University]</p>
-						<p class="story-quote">[Story]</p>
-					</div>
-				</article>
-				<article class="story-card">
-					<div class="story-image">
-						<img src="images/student-placeholder.jpg" alt="Scholarship recipient story" />
-					</div>
-					<div class="story-content">
-						<h3>[Name]</h3>
-						<p class="story-degree">[Degree], [University]</p>
-						<p class="story-quote">[Story]</p>
-					</div>
-				</article>
-				<article class="story-card">
-					<div class="story-image">
-						<img src="images/student-placeholder.jpg" alt="Scholarship recipient story" />
-					</div>
-					<div class="story-content">
-						<h3>[Name]</h3>
-						<p class="story-degree">[Degree], [University]</p>
-						<p class="story-quote">[Story]</p>
-					</div>
-				</article>
-			</div>
-		</div>
-	</section>
-
-	<!-- How It Works Section -->
-	<section class="how-it-works">
-		<div class="container">
-			<h2>How It Works</h2>
-			<div class="how-grid">
-				<div class="how-card">
-					<div class="how-icon">🎓</div>
-					<h3>For Students</h3>
-					<div class="how-content">
-						<h4>Who Can Apply?</h4>
-						<ul>
-							<li>Residents of Narooma or surrounding regions</li>
-							<li>Enrolled, or planning to enrol, in tertiary education</li>
-							<li>Commitment to community engagement</li>
-							<li>Demonstrated financial need</li>
-						</ul>
-						<h4>What We Offer</h4>
-						<ul>
-							<li>Financial scholarships for tuition and living expenses</li>
-							<li>One-on-one mentorship from alumni and professionals</li>
-							<li>Connection to our scholar community</li>
-							<li>Career guidance and networking opportunities</li>
-						</ul>
-						<h4>Application Process</h4>
-						<p>Applications open annually in [Month]. Contact us or your school for eligibility requirements, deadline, and application materials.</p>
-					</div>
-				</div>
-				<div class="how-card">
-					<div class="how-icon">💙</div>
-					<h3>For Donors</h3>
-					<div class="how-content">
-						<h4>Why Give?</h4>
-						<p>Your generosity directly supports students in our region to access higher education. Every dollar contributes directly to a student's education and helps build a stronger, more educated community on the Far South Coast.</p>
-						<h4>Ways to Contribute</h4>
-						<ul>
-							<li>One-time donations of any amount</li>
-							<li>Annual scholarship sponsorship</li>
-							<li>Planned giving and bequests</li>
-							<li>Corporate partnerships</li>
-						</ul>
-						<h4>Your Impact</h4>
-						<p>100% of your donations go to support students. We keep you updated on the impact that you make on students.</p>
-						<h4>Get Involved Beyond Giving</h4>
-						<ul>
-							<li>Become a mentor to current scholars</li>
-							<li>Share career opportunities with our network</li>
-							<li>Volunteer at scholarship events</li>
-						</ul>
+					<div class="hero-content">
+						<h1>Lighthouse Scholarship Fund</h1>
+						<p class="hero-tagline">Guiding students toward brighter futures</p>
+						<p class="hero-text">Supporting talented students from the Far South Coast to pursue higher education and bring valuable skills back to their communities through financial assistance, mentorship, and guidance.</p>
+						<a href="#apply" class="btn">Learn How to Apply</a>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<!-- Contact/CTA Section -->
-	<section class="contact" id="contact">
-		<div class="container">
-			<h2>Ready to Make a Difference?</h2>
-			<p class="section-intro">Whether you're a student with dreams or a supporter who wants to help, we'd love to hear from you.</p>
-			<div class="contact-grid">
-				<div class="contact-card">
-					<h3>Students</h3>
-					<p>Questions about eligibility or the application process?</p>
-					<a href="mailto:[Email]" class="contact-email">[Email]</a>
+		<section class="section" id="about">
+			<div class="container">
+				<div class="section-header">
+					<h2>About the Fund</h2>
+					<p class="subtitle">Supporting rural students since 2007</p>
 				</div>
-				<div class="contact-card">
-					<h3>Donors & Supporters</h3>
-					<p>Interested in supporting our scholars?</p>
-					<a href="mailto:[Email]" class="contact-email">[Email]</a>
+				<p class="intro">The Lighthouse Scholarship Fund was established in 2007 by Jenny Munro to ensure talented students from the Far South Coast aren't held back by geography or financial barriers.</p>
+				<div class="card-grid">
+					<div class="card">
+						<h3>Our Purpose</h3>
+						<p>Financial support and mentorship for students pursuing tertiary education. We help cover tuition, accommodation, and living expenses so students can focus on their studies.</p>
+					</div>
+					<div class="card">
+						<h3>Our Community</h3>
+						<p>Founded by Jenny Munro, who also established Lighthouse Surgery Narooma and Bermagui Medical Centre, continuing a legacy of community support.</p>
+					</div>
+					<div class="card">
+						<h3>Our Impact</h3>
+						<p>Many scholars return to bring valuable skills back to the region. Our graduates work in healthcare, education, business, and community services across the Far South Coast.</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<!-- Footer -->
-	<footer>
+		<section class="section alt" id="stories">
+			<div class="container">
+				<div class="section-header">
+					<h2>Student Stories</h2>
+					<p class="subtitle">Meet some of the students whose journeys we've been privileged to support.</p>
+				</div>
+				<div class="card-grid">
+					<article class="story-card">
+						<div class="story-image">
+							<div class="placeholder">[Student Photo]</div>
+						</div>
+						<div class="story-content">
+							<h3>[Name]</h3>
+							<p class="story-name">[Degree], [University]</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+						</div>
+					</article>
+					<article class="story-card">
+						<div class="story-image">
+							<div class="placeholder">[Student Photo]</div>
+						</div>
+						<div class="story-content">
+							<h3>[Name]</h3>
+							<p class="story-name">[Degree], [University]</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+						</div>
+					</article>
+					<article class="story-card">
+						<div class="story-image">
+							<div class="placeholder">[Student Photo]</div>
+						</div>
+						<div class="story-content">
+							<h3>[Name]</h3>
+							<p class="story-name">[Degree], [University]</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="apply">
+			<div class="container">
+				<div class="section-header">
+					<h2>How to Apply</h2>
+					<p class="subtitle">Our application process is designed to be straightforward and accessible.</p>
+				</div>
+				<div class="steps">
+					<div class="step">
+						<div class="step-number">01</div>
+						<div>
+							<h3>Review Eligibility</h3>
+							<p>Check if you're eligible. Applicants must be from the Far South Coast region of NSW and enrolled in or planning to commence tertiary education.</p>
+						</div>
+					</div>
+					<div class="step">
+						<div class="step-number">02</div>
+						<div>
+							<h3>Prepare Your Application</h3>
+							<p>Gather your academic transcripts, write a personal statement explaining your goals, and arrange references from teachers or community members who know you well.</p>
+						</div>
+					</div>
+					<div class="step">
+						<div class="step-number">03</div>
+						<div>
+							<h3>Submit Your Application</h3>
+							<p>Complete the online application form and upload all required documents before the deadline. Make sure everything is accurate and complete.</p>
+						</div>
+					</div>
+					<div class="step">
+						<div class="step-number">04</div>
+						<div>
+							<h3>Selection Process</h3>
+							<p>One student is selected each year based on their application. Successful applicants receive financial support and ongoing mentorship throughout their studies.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section alt" id="contact">
+			<div class="container">
+				<div class="section-header">
+					<h2>Get in Touch</h2>
+					<p class="subtitle">Have questions about the scholarship or interest in supporting our mission? We're here to help.</p>
+				</div>
+				<div class="contact-grid">
+					<div class="contact-info">
+						<div class="contact-card">
+							<h3>Email</h3>
+							<a href="mailto:info@lighthousescholarship.org.au">info@lighthousescholarship.org.au</a>
+						</div>
+						<div class="contact-card">
+							<h3>Phone</h3>
+							<a href="tel:+61407299149">0407 299 149</a>
+						</div>
+						<div class="contact-card">
+							<h3>Address</h3>
+							<p>51 Forsters Bay Rd<br>Narooma NSW&nbsp;2546<br>Australia</p>
+						</div>
+					</div>
+					<form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+						<input type="hidden" name="form-name" value="contact">
+						<!-- Honeypot field for spam protection -->
+						<p style="display: none;">
+							<label>Don't fill this out if you're human: <input name="bot-field"></label>
+						</p>
+						<h3>Send us a message</h3>
+						<div>
+							<label for="name">Name <span class="required">*</span></label>
+							<input type="text" id="name" name="name" required autocomplete="name">
+						</div>
+						<div>
+							<label for="email">Email <span class="required">*</span></label>
+							<input type="email" id="email" name="email" required autocomplete="email">
+						</div>
+						<div>
+							<label for="subject">Subject <span class="required">*</span></label>
+							<input type="text" id="subject" name="subject" required>
+						</div>
+						<div>
+							<label for="message">Message <span class="required">*</span></label>
+							<textarea id="message" name="message" rows="5" required></textarea>
+						</div>
+						<button type="submit" class="btn">Send Message</button>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
 		<div class="container">
-			<p>&copy; 2025 Lighthouse Scholarship Fund</p>
-			<p class="footer-tagline">Supporting education in Narooma and surrounding regions</p>
+			<p>&copy; 2026 Lighthouse Scholarship Fund. Established 2007.</p>
+			<p><a href="https://bravehearthealth.com.au" target="_blank" rel="noopener noreferrer">Braveheart Healthcare</a></p>
 		</div>
 	</footer>
+
+	<script src="script.js"></script>
 </body>
 </html>
