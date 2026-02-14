@@ -50,7 +50,6 @@ a:hover {
 	color: #3A5966;
 }
 
-/* Focus styles for accessibility */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -59,7 +58,6 @@ textarea:focus-visible {
 	outline-offset: 2px;
 }
 
-/* Skip to main content link */
 .skip-link {
 	position: absolute;
 	top: -100px;
@@ -526,7 +524,6 @@ textarea:focus-visible {
 	outline-offset: 2px;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
 	.nav-menu {
 		position: fixed;
@@ -599,7 +596,6 @@ textarea:focus-visible {
 	}
 }
 
-/* Tablet Responsiveness */
 @media (min-width: 769px) and (max-width: 1024px) {
 	.card-grid {
 		grid-template-columns: repeat(2, 1fr);
@@ -610,7 +606,6 @@ textarea:focus-visible {
 	}
 }
 
-/* Print Styles */
 @media print {
 	.nav,
 	.nav-toggle,
