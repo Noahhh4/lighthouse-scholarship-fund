@@ -170,16 +170,19 @@ h3 {
   transition: background 0.18s, transform 0.22s;
 }
 .nav-mark .lsf-tile  { background: #2e2e2e; color: #fff; }
-.nav-mark:hover .lsf-tile { background: var(--blue); }
-.nav-mark:hover .lsf-tile:nth-child(1) { transform: translateY(-3px); transition-delay:   0ms; }
-.nav-mark:hover .lsf-tile:nth-child(2) { transform: translateY(-3px); transition-delay:  55ms; }
-.nav-mark:hover .lsf-tile:nth-child(3) { transform: translateY(-3px); transition-delay: 110ms; }
+@media (hover: hover) {
+  .nav-mark:hover .lsf-tile { background: var(--blue); }
+  .nav-mark:hover .lsf-tile:nth-child(1) { transform: translateY(-3px); transition-delay:   0ms; }
+  .nav-mark:hover .lsf-tile:nth-child(2) { transform: translateY(-3px); transition-delay:  55ms; }
+  .nav-mark:hover .lsf-tile:nth-child(3) { transform: translateY(-3px); transition-delay: 110ms; }
+}
 
-.foot-mark .lsf-tile  { background: #2e2e2e; color: #fff; }
-.foot-mark:hover .lsf-tile { background: var(--blue); }
-.foot-mark:hover .lsf-tile:nth-child(1) { transform: translateY(-3px); transition-delay:   0ms; }
-.foot-mark:hover .lsf-tile:nth-child(2) { transform: translateY(-3px); transition-delay:  55ms; }
-.foot-mark:hover .lsf-tile:nth-child(3) { transform: translateY(-3px); transition-delay: 110ms; }
+@media (hover: hover) {
+  .foot-mark:hover .lsf-tile { background: var(--blue); }
+  .foot-mark:hover .lsf-tile:nth-child(1) { transform: translateY(-3px); transition-delay:   0ms; }
+  .foot-mark:hover .lsf-tile:nth-child(2) { transform: translateY(-3px); transition-delay:  55ms; }
+  .foot-mark:hover .lsf-tile:nth-child(3) { transform: translateY(-3px); transition-delay: 110ms; }
+}
 
 /* --- NAV LINKS --- */
 .nav-links {
@@ -626,18 +629,19 @@ h3 {
 
 @media (max-width: 48rem) {
   .hero-inner { grid-template-columns: 1fr; }
-  .hero-logo { width: clamp(8rem, 30vw, 11rem); }
+  .hero-logo { display: none; }
 }
 
 @media (max-width: 36rem) {
   .nav-links {
     display: none; flex-direction: column;
-    position: fixed; inset: 3.5rem 0 0;
+    position: fixed; top: 3.5rem; left: 0; right: 0; bottom: 0;
     background: #fff;
     padding: 2.5rem var(--pad) 3rem;
     gap: 0; z-index: 99;
     border-top: 1px solid var(--rule);
     overflow-y: auto;
+    height: calc(100vh - 3.5rem);
   }
   .nav-links li { border-bottom: 1px solid var(--rule); }
   .nav-links a {
