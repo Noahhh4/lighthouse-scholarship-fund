@@ -170,6 +170,7 @@ h3 {
   transition: background 0.18s, transform 0.22s;
 }
 .nav-mark .lsf-tile  { background: #2e2e2e; color: #fff; }
+.foot-mark .lsf-tile { background: #2e2e2e; color: #fff; }
 @media (hover: hover) {
   .nav-mark:hover .lsf-tile { background: var(--blue); }
   .nav-mark:hover .lsf-tile:nth-child(1) { transform: translateY(-3px); transition-delay:   0ms; }
@@ -641,7 +642,7 @@ h3 {
     gap: 0; z-index: 99;
     border-top: 1px solid var(--rule);
     overflow-y: auto;
-    height: calc(100vh - 3.5rem);
+    height: calc(100dvh - 3.5rem);
   }
   .nav-links li { border-bottom: 1px solid var(--rule); }
   .nav-links a {
@@ -649,9 +650,10 @@ h3 {
     font-size: 1.1rem; font-weight: 300; color: var(--black);
   }
   .nav-links a.nav-cta {
-    background: none; color: var(--black);
+    background: none; color: var(--black) !important;
     padding: 1.1rem 0; font-size: 1.1rem;
     letter-spacing: 0; text-transform: none;
+    opacity: 1 !important;
   }
   .nav-links.open { display: flex; }
   .nav-toggle { display: flex; }
