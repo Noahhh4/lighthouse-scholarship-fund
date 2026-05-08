@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Apply for a Lighthouse Scholarship Fund award — supporting Far South Coast NSW students in higher education." />
+  <meta name="description" content="Apply for a Lighthouse Scholarship Fund award — supporting regional NSW students in higher education." />
   <title>Apply — Lighthouse Scholarship Fund</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,79 +42,56 @@
     </div>
   </header>
 
-  <section class="ruled">
-    <div class="wrap">
-      <div class="two-col fade">
-        <h2>Eligibility</h2>
-        <div class="prose">
-          <p>To be eligible you must be from the Far South Coast region of NSW — including Batemans Bay, Moruya, Narooma, Bermagui, Bega, Eden, and surrounding areas — and enrolled in or planning to commence an approved tertiary education program.</p>
-          <p>Applications are welcome from school leavers and there is no minimum academic score. We look for students who demonstrate drive, character, and a genuine connection to their community.</p>
-        </div>
-      </div>
-      <div class="steps-header fade">
-        <h2>The process</h2>
-        <span class="eyebrow">Four steps</span>
-      </div>
-      <div class="step fade"><span class="step-num">01</span><div><h3>Check your eligibility</h3><p>Make sure you're from the Far South Coast and planning to undertake tertiary education. If you're unsure, reach out — we're happy to help.</p></div></div>
-      <div class="step fade"><span class="step-num">02</span><div><h3>Prepare your documents</h3><p>Gather your supporting documents — academic transcripts, a resume, letters of reference, or anything else that reflects your background and goals.</p></div></div>
-      <div class="step fade"><span class="step-num">03</span><div><h3>Submit the form below</h3><p>Complete the application, attach your documents, and double-check everything before submitting.</p></div></div>
-      <div class="step fade"><span class="step-num">04</span><div><h3>Selection and ongoing support</h3><p>One student is selected each year and receives financial support — tuition, accommodation, and living costs — plus mentorship for the duration of their studies.</p></div></div>
-    </div>
-  </section>
-
   <section class="form-section">
     <div class="wrap">
 
       <div class="form-preamble fade">
         <div>
           <h2>Application form</h2>
-          <p class="form-preamble-body">Fill out the form below and attach your supporting documents. We review applications annually — there's no points score or academic threshold. We want to understand who you are.</p>
+          <p class="form-preamble-body">There's no points score or academic cut-off — we want to understand who you are, where you come from, and what you hope to achieve. Fill out the form and attach anything that helps tell your story.</p>
         </div>
         <dl class="form-meta">
-          <div><dt>Applications open</dt><dd>Annually — contact us for the current round's closing date.</dd></div>
-          <div><dt>What we look for</dt><dd>Drive, character, and a genuine connection to the Far South Coast community.</dd></div>
-          <div><dt>Questions?</dt><dd>Email <a href="mailto:info@lighthousescholarship.org.au">info@lighthousescholarship.org.au</a> and we'll get back to you.</dd></div>
+          <div><dt>Who can apply</dt><dd>Students from regional NSW planning to undertake tertiary education, at any stage of their journey.</dd></div>
+          <div><dt>What we look for</dt><dd>Drive, character, and a genuine connection to the regional NSW community.</dd></div>
+          <div><dt>Applications open</dt><dd>Annually. Contact us for the current round's closing date.</dd></div>
+          <div><dt>Not sure?</dt><dd>Email <a href="mailto:jenny@jmunro.com.au">jenny@jmunro.com.au</a> before applying. We're happy to have a chat.</dd></div>
         </dl>
       </div>
 
-      <form class="form fade" name="apply" method="POST" enctype="multipart/form-data">
+      <form class="form fade"
+            name="apply"
+            method="POST"
+            action="/thankyou.html"
+            enctype="multipart/form-data"
+            data-netlify="true"
+            netlify-honeypot="bot-field">
+
+        <!-- Netlify honeypot — hidden from real users -->
+        <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
+        <input type="hidden" name="form-name" value="apply" />
 
         <div class="form-block">
-          <span class="form-block-label">Personal details</span>
+          <span class="form-block-label">Your details</span>
           <div class="form-row">
             <div class="field"><label for="first-name">First name *</label><input type="text" id="first-name" name="first-name" required autocomplete="given-name" /></div>
             <div class="field"><label for="last-name">Last name *</label><input type="text" id="last-name" name="last-name" required autocomplete="family-name" /></div>
           </div>
-          <div class="form-row">
-            <div class="field"><label for="email">Email address *</label><input type="email" id="email" name="email" required autocomplete="email" /></div>
-            <div class="field"><label for="phone">Phone number</label><input type="tel" id="phone" name="phone" autocomplete="tel" /></div>
-          </div>
+          <div class="field"><label for="email">Email address *</label><input type="email" id="email" name="email" required autocomplete="email" /></div>
           <div class="field">
-            <label for="town">Town or suburb *</label>
-            <input type="text" id="town" name="town" required placeholder="e.g. Narooma, Bermagui" />
+            <label for="address">Home address *</label>
+            <input type="text" id="address" name="address" required autocomplete="street-address" placeholder="Street address, town, postcode" />
           </div>
         </div>
 
         <div class="form-block">
           <span class="form-block-label">Study details</span>
-          <div class="form-row">
-            <div class="field">
-              <label for="institution">Institution *</label>
-              <input type="text" id="institution" name="institution" required placeholder="e.g. University of New South Wales" />
-            </div>
-            <div class="field">
-              <label for="course">Course or degree *</label>
-              <input type="text" id="course" name="course" required placeholder="e.g. Bachelor of Science" />
-            </div>
-          </div>
-        </div>
-
-        <div class="form-block">
-          <span class="form-block-label">Your application</span>
           <div class="field">
-            <label for="statement">Personal statement *</label>
-            <textarea id="statement" name="statement" rows="10" required placeholder="Tell us about yourself — your goals, your connection to the Far South Coast, your involvement in the community, and why you're applying. There's no right answer; we want to understand who you are."></textarea>
-            <span class="field-hint">Aim for 300–500 words. Cover what drives you, your community ties, and what you hope to achieve.</span>
+            <label for="institution">University *</label>
+            <input type="text" id="institution" name="institution" required autocomplete="organization" placeholder="e.g. University of New South Wales" />
+          </div>
+          <div class="field">
+            <label for="course">Course *</label>
+            <input type="text" id="course" name="course" required placeholder="e.g. Bachelor of Science" />
           </div>
         </div>
 
@@ -122,15 +99,14 @@
           <span class="form-block-label">Supporting documents</span>
           <div class="file-drop">
             <span class="file-drop-label">Attach files</span>
-            <p class="file-drop-hint">Transcripts, resume, letters of reference, or anything else you'd like us to consider. You can select multiple files.</p>
+            <p class="file-drop-hint">Transcripts, a resume, letters of reference, a personal statement. Anything that helps us understand who you are. You can select multiple files.</p>
             <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" multiple />
           </div>
-          <p class="form-note">Accepted: PDF, Word, images. Max 10 MB per file. Having trouble? Email <a href="mailto:info@lighthousescholarship.org.au">info@lighthousescholarship.org.au</a>.</p>
+          <p class="form-note">Accepted formats: PDF, Word, images. Max 10 MB per file. Having trouble? Email <a href="mailto:jenny@jmunro.com.au">jenny@jmunro.com.au</a>.</p>
         </div>
 
         <div class="form-submit">
           <button type="submit" class="btn">Submit application</button>
-          <span class="form-note">We'll confirm receipt by email within two business days.</span>
         </div>
 
       </form>
@@ -140,13 +116,13 @@
   <section class="pre-footer">
     <div class="wrap"><div class="pre-footer-inner">
       <div class="pre-footer-copy fade">
-        <span class="eyebrow">Lighthouse Scholarship Fund — Est. 2007</span>
-        <h2>Where you grow up shouldn't determine how <em>far</em> you go.</h2>
-        <p>Every scholarship is a door opened for a young person from the Far South Coast.</p>
+        <span class="eyebrow">Not sure where to start?</span>
+        <h2>Hear from students who've <em>been there.</em></h2>
+        <p>Reading about past scholars can help. Every one of them was once filling out the same form, wondering if they were the right fit.</p>
       </div>
       <div class="pre-footer-actions fade" style="transition-delay:.1s">
-        <a href="contact.html" class="btn-ghost">Get in touch</a>
-        <a href="support.html" class="text-link text-link-light">Support the fund</a>
+        <a href="stories.html" class="btn-ghost">Read scholar stories</a>
+        <a href="about.html" class="text-link text-link-light">About the fund</a>
       </div>
     </div></div>
   </section>
@@ -170,7 +146,7 @@
       </div>
       <dl class="footer-enquiries">
         <dt>Enquiries</dt>
-        <dd><a href="mailto:info@lighthousescholarship.org.au">info@lighthousescholarship.org.au</a><br><a href="tel:+61407299149">0407 299 149</a></dd>
+        <dd><a href="mailto:jenny@jmunro.com.au">jenny@jmunro.com.au</a><br><a href="tel:+61407299149">0407 299 149</a></dd>
         <dt>Address</dt>
         <dd>51 Forsters Bay Rd<br>Narooma NSW 2546</dd>
       </dl>
